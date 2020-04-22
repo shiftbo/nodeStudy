@@ -2,6 +2,9 @@ const express = require('express')
 
 var app = express()
 
+// 公开指定目录
+app.use('/public/', express.static('./public/'))
+
 app.get('/', (req, res) => {
     res.send('hello express')
 })
